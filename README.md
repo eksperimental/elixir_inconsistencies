@@ -68,7 +68,8 @@ It is a convention to use underscores to separate words, but there are some exce
 - __`List.key*`__
   - __`keydelete`__
     - _Affects_: `List.keydelete/3`.
-    - _Proposed_: `List.delete_key/3`, `List.Key.delete/3`.
+    - _Proposed_: `List.delete_key/3`.
+    - _Proposed alternatively_: `List.key_delete/3`, `List.Key.delete/3`.
     - _Precedents_: `Application.delete_env/3`, `Code.delete_path/1`,
       `Keyword.delete_first/2`, `List.delete_at/2`, `Module.delete_attribute/2`, `Process.delete/1`,
       `Supervisor.delete_child/2`, `System.delete_env/1`, `Tuple.delete_at/2`, `Process.get_keys/1`,
@@ -77,39 +78,46 @@ It is a convention to use underscores to separate words, but there are some exce
 
   - __`keyfind`__
     - _Affects_: `List.keyfind/4`.
-    - _Proposed_: `List.find_key/4`, `List.Key.find/4`.
+    - _Proposed_: `List.find_key/4`.
+    - _Proposed alternatively_: `List.key_find/4`, `List.Key.find/4`.
     - _Precedents_: `Enum.find/3`, `Enum.find_index/2`, `Enum.find_value/3`,
       `System.find_executable/1`, `Task.find/2`.
     - _Notes_: name was borrowed from Erlang's `:lists.keyfind/4`.
 
   - __`keymember?`__
     - _Affects_: `List.keymember?/3`.
-    - _Proposed_: `List.member_key?/3` or `List.Key.member?/3`.
+    - _Proposed_: `List.member_key?/3` or `List.keymember?/3`.
+    - _Proposed alternatively_: `List.Key.member?/3`.
     - _Notes_: name was borrowed from Erlang's `:lists.keymember?/3`.
 
   - __`keyreplace`__
     - _Affects_: `List.keyreplace/4`.
-    - _Proposed_: `List.replace_key/4` or `List.Key.replace/4`.
+    - _Proposed_: `List.replace_key/4`.
+    - _Proposed alternatively_: `List.key_replace/4` or `List.Key.replace/4`.
     - _Notes_: name was borrowed from Erlang's `:lists.keydelete/3`.
 
   - __`keyreplace`_
     - Affects: `List.keyreplace/4`.
-    - Proposed: `List.replace_key/4` or `List.Key.replace/4`.
+    - Proposed: `List.replace_key/4`.
+    - Proposed alternatively: `List.key_replace/4` or `List.Key.replace/4`.
     - Notes: name was borrowed from Erlang's `:lists.keyreplace/3`.
 
   - __`keysort`__
     - _Affects_: `List.keysort/2`.
-    - _Proposed_: `List.sort_key/2` or `List.Key.sort/2`.
+    - _Proposed_: `List.sort_key/2`.
+    - _Proposed alternatively_: `List.key_sort/2` or `List.Key.sort/2`.
     - _Notes_: name was borrowed from Erlang's `:lists.keysort/3`.
 
   - __`keystore`__
     - _Affects_: `List.keystore/4`.
-    - _Proposed_: `List.store_key/4` or `List.Key.store/4`.
+    - _Proposed_: `List.store_key/4`.
+    - _Proposed_ alternatively: `List.key_store/4` or `List.Key.store/4`.
     - _Notes_: name was borrowed from Erlang's `:lists.keystore/4`.
 
   - __`keytake`__
     - _Affects_: `List.keytake/3`.
-    - _Proposed_: `List.take_key/3` or `List.Key.take/3`.
+    - _Proposed_: `List.take_key/3`.
+    - _Proposed alternatively_: `List.key_take/3` or `List.Key.take/3`.
     - _Notes_: name was borrowed from Erlang's `:lists.keytake/3`.
 
 - __`Path.*name`__
@@ -149,6 +157,7 @@ It is a convention to use underscores to separate words, but there are some exce
 - __`IO.bin*`__
   - _Affects_: `IO.binread/2`, `IO.binstream/2`, `IO.binwrite/2`.
   - _Proposed_: `IO.bin_read/2`, `IO.bin_stream/2`, `IO.bin_write/2`.
+
 
 ### Typespecs
 
