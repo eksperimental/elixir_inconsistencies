@@ -1,7 +1,7 @@
 # Elixir Inconsistencies
 
-The aim of this project, is to document all inconsistencies found throughout the Elixir programming
-languages.
+The aim of this project is to document all inconsistencies found throughout the Elixir programming
+language.
 Providing a single page where all inconsistencies can be looked at, hoping that many could be fixed
 in next major release, and if not possible users can still be aware of them.
 Also a reference to look at when creating new stuff in the Elixir programming language project.
@@ -37,7 +37,6 @@ It is a convention to use underscores to separate words, but there are some exce
   Acronysms should be spelled all in uppercase: ie. `pid` should be spelled `PID`. 
 
 ## Considerations
-
 
 
 ## Elixir
@@ -211,6 +210,16 @@ It is a convention to use underscores to separate words, but there are some exce
 
 
 ## Mix
+
+### Data
+
+  - Deps status:
+    - _Affects_: `:divergedonly`, `:divergedreq`, `:elixirlock`, `:invalidapp`, `:invalidvsn`,
+      `:lockmismatch`, `:lockoutdated`, `:noappfile`, `:nolock`, `:nomatchvsn`, `:nosemver`,
+      `:scmlock`.
+    - _Proposed_: `:diverged_only`, `:diverged_req`, `:elixir_lock`, `:invalid_app`, `:invalid_vsn`,
+      `:lock_mismatch`, `:lock_outdated`, `:no_app_file`, `:no_lock`, `:no_match_vsn`, `:no_semver`,
+      `:scm_lock`.
 
 ### Tasks
 
