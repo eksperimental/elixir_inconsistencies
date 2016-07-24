@@ -34,7 +34,7 @@ It is a convention to use underscores to separate words, but there are some exce
     this one in particular uses the British English spelling, being borrowed from Erlang. 
 
 - _Acronysms__
-  Acronysms should be spelled all in uppercase such as: `pid`. 
+  Acronysms should be spelled all in uppercase: ie. `pid` should be spelled `PID`. 
 
 ## Considerations
 
@@ -217,3 +217,8 @@ It is a convention to use underscores to separate words, but there are some exce
   - __`loadconfig`__
     - _Affects_: `mix loadconfig`, `Mix.Tasks.Loadconfig`.
     - _Proposed_: `mix load_config`, `Mix.Tasks.LoadConfig`.
+
+  - __`loadpaths`__
+    - _Affects_: `mix loadpaths`, `mix deps.loadpaths`, `Mix.Tasks.Loadpaths`, `Mix.Tasks.Deps.Loadpaths`.
+    - _Proposed_: `mix load_paths`, `mix deps.load_paths`, `Mix.Tasks.LoadPaths`, `Mix.Tasks.Deps.LoadPaths`.
+    - _Presedents_: `Mix.Projects.load_paths/1`, `mix load_all`, `mix load_tasks`.
