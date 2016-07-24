@@ -56,10 +56,10 @@ It is a convention to use underscores to separate words, but there are some exce
     - `List.fold_l/3` and`List.fold_r/3`.
   - _Notes_: These List.fold* functions come from Haskell, but it is weird to have l & r as
       left and right, as they are not seen in it in other function names.
-    Other functions use a single letter, but these are Unix command, and they refer to the short
+      Other functions use a single letter, but these are Unix command, and they refer to the short
       version of the argument, such as `File.cp_r/3`, `File.rm_rf/1`, `File.ln_s/2`.
-    So I propose we use "_left" and "_right" to be more explicit,
-    and to make a clear difference away from single letters that represent short arguments.
+      So I propose we use "_left" and "_right" to be more explicit,
+      and to make a clear difference away from single letters that represent short arguments.
 
 - __`macrocallback`__
   - _Affects_: `Behaviour.defmacrocallback/1`.
@@ -114,15 +114,16 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Notes_: name was borrowed from Erlang's `:lists.keytake/3`.
 
 - __`Path.*name`__
-  - _Affects_: all the `Path.*name` functions. I can see this come from Unix/Linux functions,
-    but only "basename" and "dirname" are, the rest just come from asimilating the uncommon naming
-    convention.
+  - _Affects_: all the `Path.*name` functions. 
+  - _Notes_: I can see this come from Unix/Linux functions,
+      but only "basename" and "dirname" are, the rest just come from asimilating the uncommon naming
+      convention.
 
   - __`absname`__
     - _Affects_: `Path.absname/1`, `Path.absname/2`.
     - _Proposed_: `Path.abs_name/1`, `Path.abs_name/2`.
     - _Notes_: name asimilated from `basename` and `dirname` Unix commands, but there is not such
-      `absname` Unix command.
+        `absname` Unix command.
 
   - __`basename`__
     - _Affects_: `Path.basename/1`, `Path.basename/2`.
@@ -133,18 +134,22 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Affects_: `Path.dirname/1`.
     - _Proposed_: `Path.dir_name/1`.
     - _Notes_: name borrowed from `dirname` Unix commands.
-- 
+ 
   - __`extname`__
     - _Affects_: `Path.extname/1`.
     - _Proposed_: `Path.ext_name/1`.
     - _Notes_: name asimilated from `basename` and `dirname` Unix commands,
-      but there is not such `extname` Unix command.
+        but there is not such `extname` Unix command.
 
   - __`rootname`__
     - _Affects_: `Path.rootname/1`.
     - _Proposed_: `Path.root_name/1`.
     - _Notes_: name asimilated from `basename` and `dirname` Unix commands,
-      but there is not such `rootname` Unix command.
+        but there is not such `rootname` Unix command.
+
+- __`IO.bin*`__
+  - _Affects_: `IO.binread/2`, `IO.binstream/2`, `IO.binwrite/2`.
+  - _Proposed_: `IO.bin_read/2`, `IO.bin_stream/2`, `IO.bin_write/2`.
 
 ### Typespecs
 
