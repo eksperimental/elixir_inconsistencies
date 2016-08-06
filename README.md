@@ -218,6 +218,16 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Notes_: See [Spelling](#spelling) section of this guide for more information.
 
 
+## ExUnit
+
+  - DocTest vs doctest
+    The module `DocTest` is considered two words (the file is named
+      `lib/ex_unit/lib/ex_unit/doc_test.ex`), but the function is named "doctest/2".
+    - _Affects_: `ExUnit.DocTest`, `ExUnit.DocTest.doctest`.
+    - _Proposed_: `ExUnit.Doctest` and `ExUnit.Doctest.doctest`.
+    - _Proposed alternatively_: `ExUnit.DocTest` and `ExUnit.DocTest.doc_test`.
+
+
 ## Mix
 
 ### Data
