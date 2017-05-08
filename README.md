@@ -41,7 +41,13 @@ It is a convention to use underscores to separate words, but there are some exce
 
 ## Elixir
 
-### Functions
+### Modules and Functions
+
+- __`opts`__
+  - _Affects_: `Inspect.Opts`, `IEx.inspect_opts/0`, `Mix.Tasks.Test.formatter_opts/1`.
+  - _Proposed_: `Inspect.Options`, `IEx.inspect_options/0`, `Mix.Tasks.Test.formatter_options/1`.
+  - _Precedents_: `OptionParser`, `Kernel.CLI.OptionParsingTest`, `Code.available_compiler_options/0`,
+      `Code.compiler_options/0`, `Code.compiler_options/1`, `Mix.SCM.accepts_options/2`.
 
 - __`whereis`__
   - _Affects_: `GenServer.whereis/1`, `Process.whereis/1`.
