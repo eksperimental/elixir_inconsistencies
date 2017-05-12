@@ -25,6 +25,7 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Notes_: having no underscore and using only one letter (p), makes it difficult sometimes to
     differentiate from the public ones.
 
+
 ## Spelling
 
 - __`Behaviour`__
@@ -33,10 +34,8 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Notes_: While all modules, functions, attributes follow the American English spelling,
     this one in particular uses the British English spelling, being borrowed from Erlang. 
 
-- _Acronysms__
+- __Acronysms__
   Acronysms should be spelled all in uppercase: ie. `pid` should be spelled `PID`. 
-
-## Considerations
 
 
 ## Elixir
@@ -102,12 +101,6 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Proposed alternatively_: `List.key_replace/4` or `List.Key.replace/4`.
     - _Notes_: name was borrowed from Erlang's `:lists.keydelete/3`.
 
-  - __`keyreplace`_
-    - Affects: `List.keyreplace/4`.
-    - Proposed: `List.replace_key/4`.
-    - Proposed alternatively: `List.key_replace/4` or `List.Key.replace/4`.
-    - Notes: name was borrowed from Erlang's `:lists.keyreplace/3`.
-
   - __`keysort`__
     - _Affects_: `List.keysort/2`.
     - _Proposed_: `List.sort_key/2`.
@@ -164,7 +157,6 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Affects_: `IO.binread/2`, `IO.binstream/2`, `IO.binwrite/2`.
   - _Proposed_: `IO.bin_read/2`, `IO.bin_stream/2`, `IO.bin_write/2`.
 
-
 ### Typespecs
 
 - __`non_neg_number`__ or __`nonempty_list/0`__
@@ -184,12 +176,12 @@ It is a convention to use underscores to separate words, but there are some exce
 - __`iodata`__
   - _Affects_: `iodata/0`.
   - _Proposed_: `io_data/0`.
-  - _Presedents_: `File.io_device` and `:std_io` to represent `standard i/o`/.
+  - _Presedents_: `File.io_device` and `:std_io` to represent `standard i/o`.
 
 - __`iolist`__
   - _Affects_: `iolist/0`.
   - _Proposed_: `io_list/0`.
-  - _Presedents_: `File.io_device` and `:std_io` to represent `standard i/o`/.
+  - _Presedents_: `File.io_device` and `:std_io` to represent `standard i/o`.
 
 - __`nodata`__
   - _Affects_: `nodata/0`.
@@ -243,7 +235,7 @@ It is a convention to use underscores to separate words, but there are some exce
       `:lockmismatch`, `:lockoutdated`, `:noappfile`, `:nolock`, `:nomatchvsn`, `:nosemver`,
       `:scmlock`.
     - _Proposed_: `:diverged_only`, `:diverged_req`, `:elixir_lock`, `:invalid_app`, `:invalid_vsn`,
-      `:lock_mismatch`, `:lock_outdated`, `:no_app_file`, `:no_lock`, `:no_match_vsn`, `:no_semver`,
+      `:lock_mismatch`, `:lock_outdated`, `:no_app_file`, `:no_lock`, `:no_match_vsn`, `:no_sem_ver`,
       `:scm_lock`.
 
 ### Tasks
