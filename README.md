@@ -53,6 +53,16 @@ It is a convention to use underscores to separate words, but there are some exce
 
 ### Modules and Functions
 
+- __Plural in module names__: names are usually in singular.
+  - _Affects_: `Kernel.SpecialForms`, `Kernel.Utils`, `IO.ANSI.Docs`, `Inspect.Opts`, `List.Chars`,
+      `List.Chars.*`, `Stream.Reducers`, `String.Chars`, `String.Chars.*`, `IEx.Helpers`,
+      `Mix.Tasks.Compile.Protocols`, `Mix.Tasks.*`, `Mix.Utils`, `:elixir_aliases`,
+      `:elixir_clauses`, `:elixir_erl_clauses`, `:elixir_errors`.
+  - _Proposed_: `Kernel.SpecialForm`, `Kernel.Util`, `IO.ANSI.Doc`, `Inspect.Opt`, `List.Char`,
+      `List.Char.*`, `Stream.Reducer`, `String.Char`, `String.Char.*`, `IEx.Helper`,
+      `Mix.Tasks.Compile.Protocol`, `Mix.Task.*`, `Mix.Util`, `:elixir_alias`,
+      `:elixir_clause`, `:elixir_erl_clause`, `:elixir_error`.
+
 - __`foldl`__, __`foldr`__
   - _Affects_: `List.foldl/3`, `List.foldr/3`.
   - _Proposed_:
