@@ -8,17 +8,28 @@ Also a reference to look at when creating new stuff in the Elixir programming la
 
 ## Convention
 
+### Spelling
+
+- __`Behaviour`__
+  - _Affects_: `@behaviour`, `Behaviour` (deprecated).
+  - _Proposed_: `@behavior`, `Behavior`.
+  - _Notes_: While all modules, functions, attributes follow the American English spelling,
+    this one in particular uses the British English spelling, being borrowed from Erlang.
+
+- __Acronysms__
+  Acronysms should be spelled all in uppercase: ie. `pid` should be spelled `PID`.
+
 ### Use of underscore
 
 It is a convention to use underscores to separate words, but there are some exceptions:
 
 - __`def*`__
   Functions/macros starting with `def` do not follow this convention:
-  - _Affects_: `defdelegate/2`, `defexception/1`, `defimpl/2`, `defimpl/3`, `defmacro/1`, `defmacro/2`, `defmacrop/1`, `defmacrop/2`, `defmodule/2`, `defoverridable/1`, `defp/1`, `defp/2`, `defprotocol/2`, `defstruct/1`         
+  - _Affects_: `defdelegate/2`, `defexception/1`, `defimpl/2`, `defimpl/3`, `defmacro/1`, `defmacro/2`, `defmacrop/1`, `defmacrop/2`, `defmodule/2`, `defoverridable/1`, `defp/1`, `defp/2`, `defprotocol/2`, `defstruct/1`.
 
-- __Private functions and macros__
+- __Private functions, macros types__
   `p` suffix meaning private does not use underscore.
-  - _Affects_: `defmacrop/1`, `defmacrop/2`, `defp/1`, `defp/2`, `@typep`
+  - _Affects_: `defmacrop/1`, `defmacrop/2`, `defp/1`, `defp/2`, `@typep`.
   - _Proposed_:
     - `defmacro_p/1`, `defmacro_p/2`, `def_p/1`, `def_p/2`, `@type_p`, or
     - `defmacro_priv/1`, `defmacro_priv/2`, `def_priv/1`, `def_priv/2`, `@type_priv`.
@@ -26,33 +37,22 @@ It is a convention to use underscores to separate words, but there are some exce
     differentiate from the public ones.
 
 
-## Spelling
-
-- __`Behaviour`__
-  - _Affects_: `@behaviour`, `Behaviour` (deprecated).
-  - _Proposed_: `@behavior`, `Behavior`.
-  - _Notes_: While all modules, functions, attributes follow the American English spelling,
-    this one in particular uses the British English spelling, being borrowed from Erlang. 
-
-- __Acronysms__
-  Acronysms should be spelled all in uppercase: ie. `pid` should be spelled `PID`. 
-
-
 ## Elixir
+
+### Attributes
+
+- __`behaviour`__
+  - _Affects_: `@behaviour`.
+  - _Proposed_: `@behavior`.
+  - _Notes_: See [Spelling](#spelling) section of this guide for more information.
+
+- __`macrocallback`__
+  - _Affects_: `@macrocallback`.
+  - _Proposed_: `@macro_callback`.
+  - _Presedents_: `@optional_callbacks`.
 
 ### Modules and Functions
 
-- __`opts`__
-  - _Affects_: `Inspect.Opts`, `IEx.inspect_opts/0`, `Mix.Tasks.Test.formatter_opts/1`.
-  - _Proposed_: `Inspect.Options`, `IEx.inspect_options/0`, `Mix.Tasks.Test.formatter_options/1`.
-  - _Precedents_: `OptionParser`, `Kernel.CLI.OptionParsingTest`, `Code.available_compiler_options/0`,
-      `Code.compiler_options/0`, `Code.compiler_options/1`, `Mix.SCM.accepts_options/2`.
-
-- __`whereis`__
-  - _Affects_: `GenServer.whereis/1`, `Process.whereis/1`.
-  - _Proposed_: `GenServer.where_is/1`, `Process.where_is/1`.
-  - _Notes_: Borrowed from Erlang's `:erlang.whereis/1`.
-  
 - __`foldl`__, __`foldr`__
   - _Affects_: `List.foldl/3`, `List.foldr/3`.
   - _Proposed_:
@@ -69,6 +69,23 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Affects_: `Behaviour.defmacrocallback/1`.
   - _Proposed_: `Behaviour.defmacro_callback/1`.
   - _Notes_: `Behaviour` module has been deprecated.
+
+- __`opts`__
+  - _Affects_: `Inspect.Opts`, `IEx.inspect_opts/0`, `Mix.Tasks.Test.formatter_opts/1`.
+  - _Proposed_: `Inspect.Options`, `IEx.inspect_options/0`, `Mix.Tasks.Test.formatter_options/1`.
+  - _Proposed alternatively_: `Inspect.Option`.
+  - _Precedents_: `OptionParser`, `Kernel.CLI.OptionParsingTest`, `Code.available_compiler_options/0`,
+      `Code.compiler_options/0`, `Code.compiler_options/1`, `Mix.SCM.accepts_options/2`.
+
+- __`whereis`__
+  - _Affects_: `GenServer.whereis/1`, `Process.whereis/1`.
+  - _Proposed_: `GenServer.where_is/1`, `Process.where_is/1`.
+  - _Notes_: Borrowed from Erlang's `:erlang.whereis/1`.
+
+- __`IO.bin*`__
+  - _Affects_: `IO.binread/2`, `IO.binstream/2`, `IO.binwrite/2`.
+  - _Proposed_: `IO.bin_read/2`, `IO.bin_stream/2`, `IO.bin_write/2`.
+  - _Proposed alternatively_: `IO.binary_read/2`, `IO.binary_stream/2`, `IO.binary_write/2`.
 
 - __`List.key*`__
   - __`keydelete`__
@@ -120,7 +137,7 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Notes_: name was borrowed from Erlang's `:lists.keytake/3`.
 
 - __`Path.*name`__
-  - _Affects_: all the `Path.*name` functions. 
+  - _Affects_: all the `Path.*name` functions.
   - _Notes_: I can see this come from Unix/Linux functions,
       but only "basename" and "dirname" are, the rest just come from asimilating the uncommon naming
       convention.
@@ -140,7 +157,7 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Affects_: `Path.dirname/1`.
     - _Proposed_: `Path.dir_name/1`.
     - _Notes_: name borrowed from `dirname` Unix commands.
- 
+
   - __`extname`__
     - _Affects_: `Path.extname/1`.
     - _Proposed_: `Path.ext_name/1`.
@@ -153,25 +170,22 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Notes_: name asimilated from `basename` and `dirname` Unix commands,
         but there is not such `rootname` Unix command.
 
-- __`IO.bin*`__
-  - _Affects_: `IO.binread/2`, `IO.binstream/2`, `IO.binwrite/2`.
-  - _Proposed_: `IO.bin_read/2`, `IO.bin_stream/2`, `IO.bin_write/2`.
-
 ### Typespecs
 
-- __`non_neg_number`__ or __`nonempty_list/0`__
-  - _Affects_: `non_neg_number/0`, `non_empty_list/0`.
-  - _Proposed_:
-    - `nonneg_number/0` and `nonempty_list/0`, or
-    - `non_neg_number/0` and `non_empty_list/0`.
-  - _Notes_: "non" is a prefix, that can be used along with hyphen as in non-negative, or without it
-    as in nonnegative.
-    [most of the words in English](https://en.wiktionary.org/wiki/Category:English_words_prefixed_with_non-)
-    use it without a hyphen, but both, non-empty and non-negative are found.
-    My proposal is to stick to one convention for all prefixes using "non",
-    preferably using the hyphen/underscore to avoid having things like "nonneg_number".
-  - References: [non-empty](https://en.wiktionary.org/wiki/non-empty) and
-    [non-negative](https://en.wiktionary.org/wiki/non-negative) entries in Wikitionary.
+- __`ansicode`__
+  - _Affects_: `ansicode/0`.
+  - _Proposed_: `ansi_code/0`.
+  - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
+
+- __`ansidata`__
+  - _Affects_: `ansidata/0`.
+  - _Proposed_: `ansi_data/0`.
+  - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
+
+- __`ansilist`__
+  - _Affects_: `ansilist/0`.
+  - _Proposed_: `ansi_list/0`.
+  - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
 
 - __`iodata`__
   - _Affects_: `iodata/0`.
@@ -188,32 +202,19 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Proposed_: `no_data/0`.
   - _Presedents_: `no_return/0`, `IO.ANSI.no_underline/0`.
 
-- __`ansidata`__
-  - _Affects_: `ansidata/0`.
-  - _Proposed_: `ansi_data/0`.
-  - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
-
-- __`ansilist`__
-  - _Affects_: `ansilist/0`.
-  - _Proposed_: `ansi_list/0`.
-  - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
-
-- __`ansicode`__
-  - _Affects_: `ansicode/0`.
-  - _Proposed_: `ansi_code/0`.
-  - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
-
-### Attributes
-
-- __`macrocallback`__
-  - _Affects_: `@macrocallback`.
-  - _Proposed_: `@macro_callback`.
-  - _Presedents_: `@optional_callbacks`.
-
-- __`behaviour`__
-  - _Affects_: `@behaviour`.
-  - _Proposed_: `@behavior`.
-  - _Notes_: See [Spelling](#spelling) section of this guide for more information.
+- __`non_neg_number`__ or __`nonempty_list/0`__
+  - _Affects_: `non_neg_number/0`, `non_empty_list/0`.
+  - _Proposed_:
+    - `nonneg_number/0` and `nonempty_list/0`, or
+    - `non_neg_number/0` and `non_empty_list/0`.
+  - _Notes_: "non" is a prefix, that can be used along with hyphen as in non-negative, or without it
+    as in nonnegative.
+    [most of the words in English](https://en.wiktionary.org/wiki/Category:English_words_prefixed_with_non-)
+    use it without a hyphen, but both, non-empty and non-negative are found.
+    My proposal is to stick to one convention for all prefixes using "non",
+    preferably using the hyphen/underscore to avoid having things like "nonneg_number".
+  - References: [non-empty](https://en.wiktionary.org/wiki/non-empty) and
+    [non-negative](https://en.wiktionary.org/wiki/non-negative) entries in Wikitionary.
 
 
 ## ExUnit

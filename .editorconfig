@@ -1,5 +1,7 @@
 # EditorConfig is awesome: http://EditorConfig.org
 
+# .editorconfig for Elixir projects
+
 # top-most EditorConfig file
 root = true
 
