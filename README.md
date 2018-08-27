@@ -46,6 +46,12 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Proposed_: `@behavior`.
   - _Notes_: See [Spelling](#spelling) section of this guide for more information.
 
+- __`fallback_to_any`__
+  - _Affects_: `@fallback_to_any`.
+  - _Proposed_: `@fall_back_on_any`.
+  - _Notes_: To "fall back" is a verb and it is two separate words. Fallback is one word when it is a noun.
+             Additionally, the phrasal-ver is "to fall back on something", not "to fall back to something"
+
 - __`macrocallback`__
   - _Affects_: `@macrocallback`.
   - _Proposed_: `@macro_callback`.
