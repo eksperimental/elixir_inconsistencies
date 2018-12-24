@@ -11,7 +11,7 @@ Also a reference to look at when creating new stuff in the Elixir programming la
 ### Spelling
 
 - __`Behaviour`__
-  - _Affects_: `@behaviour`, `Behaviour` (deprecated).
+  - _Affects_: `@behaviour`, `Behaviour` (hard-deprecated in [v1.4]).
   - _Proposed_: `@behavior`, `Behavior`.
   - _Notes_: While all modules, functions, attributes follow the American English spelling,
     this one in particular uses the British English spelling, being borrowed from Erlang.
@@ -84,7 +84,7 @@ It is a convention to use underscores to separate words, but there are some exce
 - __`macrocallback`__
   - _Affects_: `Behaviour.defmacrocallback/1`.
   - _Proposed_: `Behaviour.defmacro_callback/1`.
-  - _Notes_: `Behaviour` module has been deprecated.
+  - _Notes_: `Behaviour` module has been hard-deprecated in [v1.4].
 
 - __`opts`__
   - _Affects_: `Inspect.Opts`, `IEx.inspect_opts/0`, `Mix.Tasks.Test.formatter_opts/1`.
@@ -265,3 +265,13 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Affects_: `mix loadpaths`, `mix deps.loadpaths`, `Mix.Tasks.Loadpaths`, `Mix.Tasks.Deps.Loadpaths`.
     - _Proposed_: `mix load_paths`, `mix deps.load_paths`, `Mix.Tasks.LoadPaths`, `Mix.Tasks.Deps.LoadPaths`.
     - _Presedents_: `Mix.Projects.load_paths/1`, `mix load_all`, `mix load_tasks`.
+
+[deprecations]: https://hexdocs.pm/elixir/stable/compatibility-and-deprecations.html#table-of-deprecations
+[v1.1]: https://github.com/elixir-lang/elixir/blob/v1.1/CHANGELOG.md#4-deprecations
+[v1.2]: https://github.com/elixir-lang/elixir/blob/v1.2/CHANGELOG.md#changelog-for-elixir-v12
+[v1.3]: https://github.com/elixir-lang/elixir/blob/v1.3/CHANGELOG.md#4-deprecations
+[v1.4]: https://github.com/elixir-lang/elixir/blob/v1.4/CHANGELOG.md#4-deprecations
+[v1.5]: https://github.com/elixir-lang/elixir/blob/v1.5/CHANGELOG.md#4-deprecations
+[v1.6]: https://github.com/elixir-lang/elixir/blob/v1.6/CHANGELOG.md#4-deprecations
+[v1.7]: https://github.com/elixir-lang/elixir/blob/v1.7/CHANGELOG.md#4-hard-deprecations
+
