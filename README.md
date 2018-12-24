@@ -69,6 +69,15 @@ It is a convention to use underscores to separate words, but there are some exce
       `Mix.Tasks.Compile.Protocol`, `Mix.Task.*`, `Mix.Util`, `:elixir_alias`,
       `:elixir_clause`, `:elixir_erl_clause`, `:elixir_error`.
 
+- **char_list**
+  - _Affected_:
+    - `Atom.to_char_list/1`, `Float.to_char_list/1,2`, `Integer.to_char_list/1,2`, `Kernel.to_char_list/1`, `List.Chars.to_char_list/1`, `String.to_char_list/1`.
+  - _Proposed and Implemented_:
+    - `Atom.to_charlist/1`, `Float.to_charlist/1`, `Integer.to_charlist/1,2`, `Kernel.to_charlist/1`, `List.Chars.to_charlist/1`, `String.to_charlist/1`.
+  - _Presedents_: `empty_charlist/0` built-in type.
+  - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
+      `Float.to_char_list/2` was completely hard-depreacted in [v1.4] with no replacement in Elixir.
+
 - **`foldl`**, **`foldr`**
   - _Affects_: `List.foldl/3`, `List.foldr/3`.
   - _Proposed_:
@@ -203,6 +212,13 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Proposed_: `ansi_list/0`.
   - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
 
+- **`char_list`**
+  - _Affects_: `char_list/0` built-in type, `:char_lists` key and `:as_char_lists`
+      value in `[Inspect.Opts.t/0]` type.
+  - _Proposed_: `charlist/0` built-in type, `:charlists`, `:as_charlists`.
+  - _Presedents_: `empty_charlist/0` built-in type.
+  - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
+
 - **`iodata`**
   - _Affects_: `iodata/0`.
   - _Proposed_: `io_data/0`.
@@ -275,3 +291,4 @@ It is a convention to use underscores to separate words, but there are some exce
 [v1.6]: https://github.com/elixir-lang/elixir/blob/v1.6/CHANGELOG.md#4-deprecations
 [v1.7]: https://github.com/elixir-lang/elixir/blob/v1.7/CHANGELOG.md#4-hard-deprecations
 
+[Inspect.Opts.t/0]: https://hexdocs.pm/elixir/stable/Inspect.Opts.html#t:t/0
