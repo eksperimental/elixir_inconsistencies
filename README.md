@@ -225,18 +225,18 @@ It is a convention to use underscores to separate words, but there are some exce
 - **`char_list`**
   - _Affects_: `char_list/0` built-in type, `:char_lists` key and `:as_char_lists`
       value in `[Inspect.Opts.t/0]` type.
-  - _Proposed_: `charlist/0` built-in type, `:charlists`, `:as_charlists`.
+  - _Proposed_: `charlist/0`, `:charlists`, `:as_charlists`.
   - _Presedents_: `empty_charlist/0` built-in type.
   - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
 
 - **`iodata`**
   - _Affects_: `iodata/0` built-in type.
-  - _Proposed_: `io_data/0` built-in type.
+  - _Proposed_: `io_data/0`.
   - _Presedents_: `File.io_device` and `:std_io` to represent `standard I/O`.
 
 - **`iolist`**
   - _Affects_: `iolist/0` built-in type.
-  - _Proposed_: `io_list/0` built-in type.
+  - _Proposed_: `io_list/0`.
   - _Presedents_: `File.io_device` and `:std_io` to represent `standard I/O`.
 
 - **`nodata`**
@@ -245,7 +245,7 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Presedents_: `no_return/0` built-in type, `IO.ANSI.no_underline/0`.
 
 - **`non_neg_number`** or **`nonempty_list/0`**
-  - _Affects_: `non_neg_number/0`, `non_empty_list/0`.
+  - _Affects_: `non_neg_number/0` built-in type, `non_empty_list/0` built-in type.
   - _Proposed_:
     - `nonneg_number/0` and `nonempty_list/0`, or
     - `non_neg_number/0` and `non_empty_list/0`.
