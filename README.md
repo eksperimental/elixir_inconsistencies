@@ -200,6 +200,11 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Notes_: name asimilated from `basename` and `dirname` Unix commands,
         but there is not such `rootname` Unix command.
 
+- **`Regex.opts/1` and `:opts` field in `%Regex{}`**
+  - _Affects_: `Regex.opts/1` and `:opts` field in `%Regex{}`
+  - _Proposed_: `Regex.modifiers/1` and `:modifiers` field in `%Regex{}`.
+  - _Notes_: It is referred to them as modifiers exclusively, it it weird to call them "opts".
+
 ### Types
 
 - **`ansicode`**
