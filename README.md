@@ -229,6 +229,13 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Presedents_: `empty_charlist/0` built-in type.
   - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
 
+- **`information`**
+  - _Affects_: `Function.information/0`.
+  - _Proposed_: `Function.info/0`.
+  - _Presedents_: `Function.info/1,2`, `Port.info/1,2`, `System.build_info/0`,
+      `System.info/0`, `Module.__info__/1` (callback), `GenServer.handle_info/2` (callback),
+      `Process.info/1,2`, `GenEvent.handle_info/2` (callback).
+
 - **`iodata`**
   - _Affects_: `iodata/0` built-in type.
   - _Proposed_: `io_data/0`.
