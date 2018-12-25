@@ -96,8 +96,12 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Notes_: `Behaviour` module has been hard-deprecated in [v1.4].
 
 - **`opts`**
-  - _Affects_: `Inspect.Opts`, `IEx.inspect_opts/0`, `Mix.Tasks.Test.formatter_opts/1`.
-  - _Proposed_: `Inspect.Options`, `IEx.inspect_options/0`, `Mix.Tasks.Test.formatter_options/1`.
+  - _Affects_:
+    - `Inspect.Opts`, `IEx.inspect_opts/0`, `Mix.Tasks.Test.formatter_opts/1`.
+    - `Regex.opts/1`, `:opts` field in `Regex.t/0` type and `%Regex{}` struct.
+  - _Proposed_:
+    - `Inspect.Options`, `Regex.options/1`, `IEx.inspect_options/0`, `Mix.Tasks.Test.formatter_options/1`.
+    - `Regex.options/1`, `:options` field in `Regex.t/0` type and `%Regex{}` struct.
   - _Proposed alternatively_: `Inspect.Option`.
   - _Precedents_: `OptionParser`, `Kernel.CLI.OptionParsingTest`, `Code.available_compiler_options/0`,
       `Code.compiler_options/0`, `Code.compiler_options/1`, `Mix.SCM.accepts_options/2`.
