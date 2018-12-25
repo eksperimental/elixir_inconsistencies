@@ -57,7 +57,7 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Proposed_: `@macro_callback`.
   - _Presedents_: `@optional_callbacks`.
 
-### Modules and Functions
+### Modules and functions
 
 - **Plural in module names**: names are usually in singular.
   - _Affects_: `Kernel.SpecialForms`, `Kernel.Utils`, `ExUnit.FailuresManifest`, `IO.ANSI.Docs`, `Inspect.Opts`, `List.Chars`,
@@ -83,8 +83,8 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Proposed_:
     - `List.fold_left/3` and `List.fold_right/3`, or
     - `List.fold_l/3` and`List.fold_r/3`.
-  - _Notes_: These List.fold* functions come from Haskell, but it is weird to have l & r as
-      left and right, as they are not seen in it in other function names.
+  - _Notes_: These List.fold* functions come from Haskell, but it is weird to have "l" and "r" as
+      "left" and "right", as they are not seen in it in other function names.
       Other functions use a single letter, but these are Unix command, and they refer to the short
       version of the argument, such as `File.cp_r/3`, `File.rm_rf/1`, `File.ln_s/2`.
       So I propose we use "_left" and "_right" to be more explicit,
