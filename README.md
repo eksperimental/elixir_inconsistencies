@@ -195,21 +195,21 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Notes_: name asimilated from `basename` and `dirname` Unix commands,
         but there is not such `rootname` Unix command.
 
-### Typespecs
+### Types
 
 - **`ansicode`**
-  - _Affects_: `ansicode/0`.
-  - _Proposed_: `ansi_code/0`.
+  - _Affects_: `IO.ANSI.ansicode/0`.
+  - _Proposed_: `IO.ANSI.ansi_code/0`.
   - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
 
 - **`ansidata`**
-  - _Affects_: `ansidata/0`.
-  - _Proposed_: `ansi_data/0`.
+  - _Affects_: `IO.ANSI.ansidata/0`.
+  - _Proposed_: `IO.ANSI.ansi_data/0`.
   - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
 
 - **`ansilist`**
-  - _Affects_: `ansilist/0`.
-  - _Proposed_: `ansi_list/0`.
+  - _Affects_: `IO.ANSI.ansilist/0`.
+  - _Proposed_: `IO.ANSI.ansi_list/0`.
   - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
 
 - **`char_list`**
@@ -220,19 +220,19 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
 
 - **`iodata`**
-  - _Affects_: `iodata/0`.
-  - _Proposed_: `io_data/0`.
-  - _Presedents_: `File.io_device` and `:std_io` to represent `standard i/o`.
+  - _Affects_: `iodata/0` built-in type.
+  - _Proposed_: `io_data/0` built-in type.
+  - _Presedents_: `File.io_device` and `:std_io` to represent `standard I/O`.
 
 - **`iolist`**
-  - _Affects_: `iolist/0`.
-  - _Proposed_: `io_list/0`.
-  - _Presedents_: `File.io_device` and `:std_io` to represent `standard i/o`.
+  - _Affects_: `iolist/0` built-in type.
+  - _Proposed_: `io_list/0` built-in type.
+  - _Presedents_: `File.io_device` and `:std_io` to represent `standard I/O`.
 
 - **`nodata`**
-  - _Affects_: `nodata/0`.
-  - _Proposed_: `no_data/0`.
-  - _Presedents_: `no_return/0`, `IO.ANSI.no_underline/0`.
+  - _Affects_: `IO.nodata/0`.
+  - _Proposed_: `IO.no_data/0`.
+  - _Presedents_: `no_return/0` built-in type, `IO.ANSI.no_underline/0`.
 
 - **`non_neg_number`** or **`nonempty_list/0`**
   - _Affects_: `non_neg_number/0`, `non_empty_list/0`.
