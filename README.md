@@ -189,9 +189,10 @@ It is a convention to use underscores to separate words, but there are some exce
 
   - **`extname`**
     - _Affects_: `Path.extname/1`.
-    - _Proposed_: `Path.ext_name/1`.
+    - _Proposed_: `Path.extension_name/1`.
+    - _Proposed alernatively_: `Path.ext_name/1`.
     - _Notes_: name asimilated from `basename` and `dirname` Unix commands,
-        but there is not such `extname` Unix command.
+        but there is not such `extname` Unix command, therefore why the abbreviation is not preferred.
 
   - **`rootname`**
     - _Affects_: `Path.rootname/1`.
