@@ -75,7 +75,7 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Proposed_:
     - `Enum.split_by/2`.
   - _Precedents_: `Enum.chunk_by/2`, `Enum.dedup_by/2`, `Enum.group_by/3`, `Enum.max_by/3`, `Enum.min_by/3`, `Enum.min_max_by/3`, `Enum.sort_by/3`, `Enum.uniq_by/2`,, `Stream.chunk_by/2`, `Stream.dedup_by/2`, `Stream.uniq_by/2`.
-  - _Rationale_: The suffix "_with" in functions is only used in three functions: `String.ends_with?/2`, `String.starts_with?/2` and `List.starts_with?/2`; and these are describin with content of elements. On the other hand, the suffix "_by" is used in the numerous functions mentioned in _Precedents_, and they are used to filter content based on the functions provided.
+  - _Rationale_: The suffix "_with" in functions is only used in three functions: `String.ends_with?/2`, `String.starts_with?/2` and `List.starts_with?/2`; and these are described in with content of elements. On the other hand, the suffix "_by" is used in the numerous functions mentioned in _Precedents_, and they are used to filter content based on the function provided.
 
 - **`foldl`**, **`foldr`**
   - _Affects_: `List.foldl/3`, `List.foldr/3`.
