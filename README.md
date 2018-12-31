@@ -77,15 +77,6 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Presedents_: `Enum.chunk_by/2`, `Enum.dedup_by/2`, `Enum.group_by/3`, `Enum.max_by/3`, `Enum.min_by/3`, `Enum.min_max_by/3`, `Enum.sort_by/3`, `Enum.uniq_by/2`,, `Stream.chunk_by/2`, `Stream.dedup_by/2`, `Stream.uniq_by/2`.
   - _Rationale_: The suffix "_with" in functions is only used in three functions: `String.ends_with?/2`, `String.starts_with?/2` and `List.starts_with?/2`; and these are describin with content of elements. On the other hand, the suffix "_by" is used in the numerous functions mentioned in _Presedents_, and they are used to filter content based on the functions provided.
 
-- **char_list**
-  - _Affected_:
-    - `Atom.to_char_list/1`, `Float.to_char_list/1,2`, `Integer.to_char_list/1,2`, `Kernel.to_char_list/1`, `List.Chars.to_char_list/1`, `String.to_char_list/1`.
-  - _Proposed and Implemented_:
-    - `Atom.to_charlist/1`, `Float.to_charlist/1`, `Integer.to_charlist/1,2`, `Kernel.to_charlist/1`, `List.Chars.to_charlist/1`, `String.to_charlist/1`.
-  - _Presedents_: `empty_charlist/0` built-in type.
-  - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
-      `Float.to_char_list/2` was completely hard-depreacted in [v1.4] with no replacement in Elixir.
-
 - **`foldl`**, **`foldr`**
   - _Affects_: `List.foldl/3`, `List.foldr/3`.
   - _Proposed_:
@@ -230,13 +221,6 @@ It is a convention to use underscores to separate words, but there are some exce
   - _Proposed_: `IO.ANSI.ansi_list/0`.
   - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
 
-- **`char_list`**
-  - _Affects_: `char_list/0` built-in type, `:char_lists` key and `:as_char_lists`
-      value in `[Inspect.Opts.t/0]` type.
-  - _Proposed_: `charlist/0`, `:charlists`, `:as_charlists`.
-  - _Presedents_: `empty_charlist/0` built-in type.
-  - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
-
 - **`information`**
   - _Affects_: `Function.information/0`.
   - _Proposed_: `Function.info/0`.
@@ -306,6 +290,34 @@ It is a convention to use underscores to separate words, but there are some exce
     - _Affects_: `mix loadpaths`, `mix deps.loadpaths`, `Mix.Tasks.Loadpaths`, `Mix.Tasks.Deps.Loadpaths`.
     - _Proposed_: `mix load_paths`, `mix deps.load_paths`, `Mix.Tasks.LoadPaths`, `Mix.Tasks.Deps.LoadPaths`.
     - _Presedents_: `Mix.Projects.load_paths/1`, `mix load_all`, `mix load_tasks`.
+
+## Implemented
+
+The following proposals have already been implemented.
+
+### Elixir
+
+#### Modules and functions
+
+- **char_list**
+  - _Affected_:
+    - `Atom.to_char_list/1`, `Float.to_char_list/1,2`, `Integer.to_char_list/1,2`, `Kernel.to_char_list/1`, `List.Chars.to_char_list/1`, `String.to_char_list/1`.
+  - _Proposed and Implemented_:
+    - `Atom.to_charlist/1`, `Float.to_charlist/1`, `Integer.to_charlist/1,2`, `Kernel.to_charlist/1`, `List.Chars.to_charlist/1`, `String.to_charlist/1`.
+  - _Presedents_: `empty_charlist/0` built-in type.
+  - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
+      `Float.to_char_list/2` was completely hard-depreacted in [v1.4] with no replacement in Elixir.
+
+#### Types
+
+- **`char_list`**
+  - _Affects_: `char_list/0` built-in type, `:char_lists` key and `:as_char_lists`
+      value in `[Inspect.Opts.t/0]` type.
+  - _Proposed_: `charlist/0`, `:charlists`, `:as_charlists`.
+  - _Presedents_: `empty_charlist/0` built-in type.
+  - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
+
+
 
 [deprecations]: https://hexdocs.pm/elixir/stable/compatibility-and-deprecations.html#table-of-deprecations
 [v1.1]: https://github.com/elixir-lang/elixir/blob/v1.1/CHANGELOG.md#4-deprecations
