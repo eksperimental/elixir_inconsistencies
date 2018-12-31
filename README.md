@@ -69,6 +69,14 @@ It is a convention to use underscores to separate words, but there are some exce
       `Mix.Tasks.Compile.Protocol`, `Mix.Task.*`, `Mix.Util`, `:elixir_alias`,
       `:elixir_clause`, `:elixir_erl_clause`, `:elixir_error`.
 
+- **_with**
+  - _Affected_:
+    - `Enum.split_with/2`.
+  - _Proposed_:
+    - `Enum.split_by/2`.
+  - _Presedents_: `Enum.chunk_by/2`, `Enum.dedup_by/2`, `Enum.group_by/3`, `Enum.max_by/3`, `Enum.min_by/3`, `Enum.min_max_by/3`, `Enum.sort_by/3`, `Enum.uniq_by/2`,, `Stream.chunk_by/2`, `Stream.dedup_by/2`, `Stream.uniq_by/2`.
+  - _Rationale_: The suffix "_with" in functions is only used in three functions: `String.ends_with?/2`, `String.starts_with?/2` and `List.starts_with?/2`; and these are describin with content of elements. On the other hand, the suffix "_by" is used in the numerous functions mentioned in _Presedents_, and they are used to filter content based on the functions provided.
+
 - **char_list**
   - _Affected_:
     - `Atom.to_char_list/1`, `Float.to_char_list/1,2`, `Integer.to_char_list/1,2`, `Kernel.to_char_list/1`, `List.Chars.to_char_list/1`, `String.to_char_list/1`.
