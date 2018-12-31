@@ -55,7 +55,7 @@ It is a convention to use underscores to separate words, but there are some exce
 - **`macrocallback`**
   - _Affects_: `@macrocallback`.
   - _Proposed_: `@macro_callback`.
-  - _Presedents_: `@optional_callbacks`.
+  - _Precedents_: `@optional_callbacks`.
 
 ### Modules and functions
 
@@ -74,8 +74,8 @@ It is a convention to use underscores to separate words, but there are some exce
     - `Enum.split_with/2`.
   - _Proposed_:
     - `Enum.split_by/2`.
-  - _Presedents_: `Enum.chunk_by/2`, `Enum.dedup_by/2`, `Enum.group_by/3`, `Enum.max_by/3`, `Enum.min_by/3`, `Enum.min_max_by/3`, `Enum.sort_by/3`, `Enum.uniq_by/2`,, `Stream.chunk_by/2`, `Stream.dedup_by/2`, `Stream.uniq_by/2`.
-  - _Rationale_: The suffix "_with" in functions is only used in three functions: `String.ends_with?/2`, `String.starts_with?/2` and `List.starts_with?/2`; and these are describin with content of elements. On the other hand, the suffix "_by" is used in the numerous functions mentioned in _Presedents_, and they are used to filter content based on the functions provided.
+  - _Precedents_: `Enum.chunk_by/2`, `Enum.dedup_by/2`, `Enum.group_by/3`, `Enum.max_by/3`, `Enum.min_by/3`, `Enum.min_max_by/3`, `Enum.sort_by/3`, `Enum.uniq_by/2`,, `Stream.chunk_by/2`, `Stream.dedup_by/2`, `Stream.uniq_by/2`.
+  - _Rationale_: The suffix "_with" in functions is only used in three functions: `String.ends_with?/2`, `String.starts_with?/2` and `List.starts_with?/2`; and these are describin with content of elements. On the other hand, the suffix "_by" is used in the numerous functions mentioned in _Precedents_, and they are used to filter content based on the functions provided.
 
 - **`foldl`**, **`foldr`**
   - _Affects_: `List.foldl/3`, `List.foldr/3`.
@@ -209,39 +209,39 @@ It is a convention to use underscores to separate words, but there are some exce
 - **`ansicode`**
   - _Affects_: `IO.ANSI.ansicode/0`.
   - _Proposed_: `IO.ANSI.ansi_code/0`.
-  - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
+  - _Precedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
 
 - **`ansidata`**
   - _Affects_: `IO.ANSI.ansidata/0`.
   - _Proposed_: `IO.ANSI.ansi_data/0`.
-  - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
+  - _Precedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
 
 - **`ansilist`**
   - _Affects_: `IO.ANSI.ansilist/0`.
   - _Proposed_: `IO.ANSI.ansi_list/0`.
-  - _Presedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
+  - _Precedents_: `IEx.Config.ansi_docs/0`, `:ansi_enabled` option in Elixir application.
 
 - **`information`**
   - _Affects_: `Function.information/0`.
   - _Proposed_: `Function.info/0`.
-  - _Presedents_: `Function.info/1,2`, `Port.info/1,2`, `System.build_info/0`,
+  - _Precedents_: `Function.info/1,2`, `Port.info/1,2`, `System.build_info/0`,
       `System.info/0`, `Module.__info__/1` (callback), `GenServer.handle_info/2` (callback),
       `Process.info/1,2`, `GenEvent.handle_info/2` (callback).
 
 - **`iodata`**
   - _Affects_: `iodata/0` built-in type.
   - _Proposed_: `io_data/0`.
-  - _Presedents_: `File.io_device` and `:std_io` to represent `standard I/O`.
+  - _Precedents_: `File.io_device` and `:std_io` to represent `standard I/O`.
 
 - **`iolist`**
   - _Affects_: `iolist/0` built-in type.
   - _Proposed_: `io_list/0`.
-  - _Presedents_: `File.io_device` and `:std_io` to represent `standard I/O`.
+  - _Precedents_: `File.io_device` and `:std_io` to represent `standard I/O`.
 
 - **`nodata`**
   - _Affects_: `IO.nodata/0`.
   - _Proposed_: `IO.no_data/0`.
-  - _Presedents_: `no_return/0` built-in type, `IO.ANSI.no_underline/0`.
+  - _Precedents_: `no_return/0` built-in type, `IO.ANSI.no_underline/0`.
 
 - **`non_neg_number`** or **`nonempty_list/0`**
   - _Affects_: `non_neg_number/0` built-in type, `non_empty_list/0` built-in type.
@@ -289,7 +289,7 @@ It is a convention to use underscores to separate words, but there are some exce
   - **`loadpaths`**
     - _Affects_: `mix loadpaths`, `mix deps.loadpaths`, `Mix.Tasks.Loadpaths`, `Mix.Tasks.Deps.Loadpaths`.
     - _Proposed_: `mix load_paths`, `mix deps.load_paths`, `Mix.Tasks.LoadPaths`, `Mix.Tasks.Deps.LoadPaths`.
-    - _Presedents_: `Mix.Projects.load_paths/1`, `mix load_all`, `mix load_tasks`.
+    - _Precedents_: `Mix.Projects.load_paths/1`, `mix load_all`, `mix load_tasks`.
 
 ## Implemented
 
@@ -304,7 +304,7 @@ The following proposals have already been implemented.
     - `Atom.to_char_list/1`, `Float.to_char_list/1,2`, `Integer.to_char_list/1,2`, `Kernel.to_char_list/1`, `List.Chars.to_char_list/1`, `String.to_char_list/1`.
   - _Proposed and Implemented_:
     - `Atom.to_charlist/1`, `Float.to_charlist/1`, `Integer.to_charlist/1,2`, `Kernel.to_charlist/1`, `List.Chars.to_charlist/1`, `String.to_charlist/1`.
-  - _Presedents_: `empty_charlist/0` built-in type.
+  - _Precedents_: `empty_charlist/0` built-in type.
   - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
       `Float.to_char_list/2` was completely hard-depreacted in [v1.4] with no replacement in Elixir.
 
@@ -314,7 +314,7 @@ The following proposals have already been implemented.
   - _Affects_: `char_list/0` built-in type, `:char_lists` key and `:as_char_lists`
       value in `[Inspect.Opts.t/0]` type.
   - _Proposed_: `charlist/0`, `:charlists`, `:as_charlists`.
-  - _Presedents_: `empty_charlist/0` built-in type.
+  - _Precedents_: `empty_charlist/0` built-in type.
   - _Notes_: The proposed change has been implemented in v1.3 and hard-deprecated in [v1.5].
 
 
